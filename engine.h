@@ -30,6 +30,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #endif
+#include <string.h>
 
 #include <GL/gl.h>
 #include <GL/glext.h>

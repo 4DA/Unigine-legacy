@@ -22,6 +22,7 @@
 
 #include <vector>
 #include "font.h"
+#include <stdio.h>
 
 #define CONSOLE_CMD	"~# "
 

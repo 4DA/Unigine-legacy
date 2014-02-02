@@ -25,6 +25,8 @@
 #include <GL/gl.h>
 #include <GL/glx.h>
 #include "pbuffer.h"
+#include <string.h>
+#include <stdio.h>
 
 /*
  */
@@ -105,19 +107,20 @@ PBuffer::PBuffer(int width,int height,int flag) : width(width), height(height) {
 		
 		const char *extensions = glXQueryExtensionsString(display,screen);
 		
-		if(strstr(extensions,"GLX_SGIX_pbuffer") && strstr(extensions,"GLX_SGIX_fbconfig")) {
-			pattrib.push_back(0);
+		// if(strstr(extensions,"GLX_SGIX_pbuffer") && strstr(extensions,"GLX_SGIX_fbconfig")) {
+		// 	pattrib.push_back(0);
 			
-			config = glXChooseFBConfigSGIX(display,screen,&attrib[0],&count);
-			if(!config) throw("glXChooseFBConfigSGIX() failed");
+		// 	config = glXChooseFBConfigSGIX(display,screen,&attrib[0],&count);
+		// 	if(!config) throw("glXChooseFBConfigSGIX() failed");
 			
-			pbuffer = glXCreateGLXPbufferSGIX(display,config[0],width,height,&pattrib[0]);
-			if(!pbuffer) throw("glXCreateGLXPbufferSGIX() failed");
+		// 	pbuffer = glXCreateGLXPbufferSGIX(display,config[0],width,height,&pattrib[0]);
+		// 	if(!pbuffer) throw("glXCreateGLXPbufferSGIX() failed");
 			
-			context = glXCreateContextWithConfigSGIX(display,config[0],GLX_RGBA_TYPE,old_context,true);
-			if(!context) throw("glXCreateContextWithConfigSGIX() failed");
+		// 	context = glXCreateContextWithConfigSGIX(display,config[0],GLX_RGBA_TYPE,old_context,true);
+		// 	if(!context) throw("glXCreateContextWithConfigSGIX() failed");
 			
-		} else {
+		// }
+        {
 			pattrib.push_back(GLX_PBUFFER_WIDTH);
 			pattrib.push_back(width);
 			pattrib.push_back(GLX_PBUFFER_HEIGHT);

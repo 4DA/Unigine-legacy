@@ -264,7 +264,7 @@ void Texture::render(float x0,float y0,float x1,float y1) {
 /* images
  */
 unsigned char *Texture::load(const char *name,int &width,int &height) {
-	char *ext = strrchr(name,'.');
+	const char *ext = strrchr(name,'.');
 	if(!ext) {
 		fprintf(stderr,"Texture::load(): unknown format of \"%s\" file",name);
 		return NULL;
@@ -279,7 +279,7 @@ unsigned char *Texture::load(const char *name,int &width,int &height) {
 }
 
 int Texture::save(const char *name,const unsigned char *data,int width,int height) {
-	char *ext = strrchr(name,'.');
+	const char *ext = strrchr(name,'.');
 	if(!ext) {
 		fprintf(stderr,"Texture::save(): unknown format of \"%s\" file",name);
 		return 0;

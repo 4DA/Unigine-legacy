@@ -37,6 +37,7 @@
 #include "collide.h"
 #include "joint.h"
 
+
 #ifdef GRAB
 	#include "video.h"
 	#define WIDTH	400
@@ -289,6 +290,13 @@ int GLAppMain::init() {
 	video = new Video("video.mpg",WIDTH,HEIGHT,16000000);
 	buffer = new unsigned char[WIDTH * HEIGHT * 4];
 #endif
+
+    // GLenum err = glewInit();
+	// if (GLEW_OK != err) {
+	// 	/* Problem: glewInit failed, something is seriously wrong. */
+	// 	fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
+	// 	exit("no glew");
+	// }
 	
 	return 1;
 }

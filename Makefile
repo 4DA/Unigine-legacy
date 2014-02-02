@@ -3,8 +3,8 @@ CC = g++
 CFLAGS = -DGL_GLEXT_LEGACY -DGL_GLEXT_PROTOTYPES
 LDFLAGS = -L/usr/X11R6/lib
 
-LIBS = -lX11 -lXxf86vm -lGL -lGLU -ljpeg -lpng -lz
-LIBS += -ldl -lopenal -logg -lvorbis -lvorbisfile -lmad -lpthread
+LIBS = -lX11 -lXxf86vm -lGL -lGLU -lGLEW -ljpeg -lpng -lz
+LIBS += -ldl -lopenal -logg -lvorbis -lvorbisfile -lmad -lpthread 
 
 #CFLAGS += -DHAVE_GTK `pkg-config gtk+-2.0 --cflags`
 #LDFLAGS += `pkg-config gtk+-2.0 --libs`

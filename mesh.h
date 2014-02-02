@@ -22,7 +22,11 @@
 
 #include <vector>
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 #include "mathlib.h"
+
 
 #define MESH_STRIP_MAGIC ('m' | 's' << 8 | '0' << 16 | '2' << 24)
 #define MESH_RAW_MAGIC ('m' | 'r' << 8 | '0' << 16 | '2' << 24)

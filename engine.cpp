@@ -292,10 +292,10 @@ int Engine::init(const char *config) {
 		have_occlusion = 1;
 		console->printf("find GL_ARB_occlusion_query extension\n");
 	}
-	if(strstr(extensions,"GL_EXT_stencil_two_side")) {
-		have_stencil_two_side = 1;
-		console->printf("find GL_EXT_stencil_two_side extension\n");
-	}
+	// if(strstr(extensions,"GL_EXT_stencil_two_side")) {
+	// 	have_stencil_two_side = 1;
+	// 	console->printf("find GL_EXT_stencil_two_side extension\n");
+	// }
 	if(strstr(extensions,"GL_NV_depth_clamp")) {
 		define("DEPTH_CLAMP");
 		console->printf("find GL_NV_depth_clamp extension\n");
@@ -908,17 +908,17 @@ void Engine::render_light() {
 			// depth clamp extension
 			if(isDefine("NV3X")) glEnable(GL_DEPTH_CLAMP_NV);
 			
-			if(have_stencil_two_side) {
-				glDisable(GL_CULL_FACE);
-				glEnable(GL_STENCIL_TEST_TWO_SIDE_EXT);
+			// if(have_stencil_two_side) {
+			// 	glDisable(GL_CULL_FACE);
+			// 	glEnable(GL_STENCIL_TEST_TWO_SIDE_EXT);
 				
-				glActiveStencilFaceEXT(GL_BACK);
-				glStencilFunc(GL_ALWAYS,0,~0);
-				glStencilOp(GL_KEEP,GL_KEEP,GL_INCR_WRAP);
-				glActiveStencilFaceEXT(GL_FRONT);
-				glStencilFunc(GL_ALWAYS,0,~0);
-				glStencilOp(GL_KEEP,GL_KEEP,GL_DECR_WRAP);
-			}
+			// 	glActiveStencilFaceEXT(GL_BACK);
+			// 	glStencilFunc(GL_ALWAYS,0,~0);
+			// 	glStencilOp(GL_KEEP,GL_KEEP,GL_INCR_WRAP);
+			// 	glActiveStencilFaceEXT(GL_FRONT);
+			// 	glStencilFunc(GL_ALWAYS,0,~0);
+			// 	glStencilOp(GL_KEEP,GL_KEEP,GL_DECR_WRAP);
+			// }
 			
 			// shadow volumes
 			for(int i = 0; i < l->pos.num_sectors; i++) {
