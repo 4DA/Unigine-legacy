@@ -1,0 +1,8 @@
+<texture0>			engine_v0.2.png
+<texture1>			noise.jpg
+<texture2>			colormap.png
+
+<parameter0>		0.7 0.8 0.7 0.5
+
+<blend>				ONE SRC_ALPHA
+<ambient_shader>	engine_v0.2_ambient.shader

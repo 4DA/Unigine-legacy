@@ -1,0 +1,10 @@
+<texture0>			ufo_glass.png
+<texture1>			flat_n.png
+<texture2>			normalize_%s.png	CUBE	CLAMP_TO_EDGE
+
+<parameter0>		0.1 0.4 0.1 0.6
+<parameter1>		0 0 0 1
+
+<blend>				ONE SRC_ALPHA
+<ambient_shader>	glass_ambient.shader
+<light_shader>		glass_light.shader

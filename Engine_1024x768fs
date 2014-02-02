@@ -1,0 +1,2 @@
+#!/bin/sh
+./Engine -w 1024 -h 768 -fs

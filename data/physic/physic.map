@@ -1,0 +1,275 @@
+<path>
+data/physic/,
+data/physic/textures/,
+data/physic/textures/cube/,
+data/physic/materials/,
+data/physic/shaders/,
+data/physic/meshes/,
+data/physic/lamp/,
+data/physic/ufo/
+
+<data>
+
+/*
+ */
+bsp {
+	mesh					physic.mesh
+	
+	
+	material	*									default.mat
+	
+	material	floor_*								floor_0.mat
+	material	floor_00|floor_01*|floor_02			floor_1.mat
+	material	ceiling_*							ceiling_0.mat
+	material	ceiling_10|ceiling_11|ceiling_12	ceiling_1.mat
+	material	ceiling_13|ceiling_15|ceiling_16	ceiling_1.mat
+	material	room_*								wall.mat
+	material	big_monitor							big_monitor.mat
+	
+	material	ufo_glass*							ufo_glass.mat
+	material	ufo_screen*							ufo_screen.mat
+	
+	material	big_screen							engine_v0.2.mat	
+}
+
+/*
+ */
+mesh {
+	mesh		door.mesh
+	material 	*	default.mat
+	shadows		0
+	pos { -6.828 8.508 -1.788 }
+}
+
+mesh {
+	mesh		door.mesh
+	material 	*	default.mat
+	shadows		0
+	pos { -6.828 28.355 -1.788 }
+}
+
+mesh {
+	mesh		door.mesh
+	material 	*	default.mat
+	shadows		0
+	pos { -3.129 37.563 0.248 }
+}
+
+mesh {
+	mesh		door.mesh
+	material 	*	default.mat
+	shadows		0
+	pos { -17.176 22.134 -1.787 0 0 1 90 }
+}
+
+mesh {
+	mesh		ufo.mesh
+	material 	*					default.mat
+	material	ufo_body*			ufo_body.mat
+	material	ufo_eyes|ufo_pipe	ufo_eyes.mat
+	shadows		0
+	pos { 10 41.45 0.65 }
+}
+
+mesh {
+	mesh		ufo.mesh
+	material 	*					default.mat
+	material	ufo_body*			ufo_body.mat
+	material	ufo_eyes|ufo_pipe	ufo_eyes.mat
+	shadows		0
+	pos { 5 46.9 0.65 }
+}
+
+/*
+ */
+light {
+	pos { 6.8 44 5.5 }
+	color 0.7 0.7 0.7 1.0
+	radius 20
+}
+
+light {
+	pos { -0.1 -0.73 4.0 }
+	color 0.7 0.7 0.7 1.0
+	radius 20
+}
+
+light {
+	pos { -22 22 2.18 }
+	color 0.5 0.5 0.6 1.0
+	radius 15
+}
+
+light {
+	pos { exp { -6.8,22,0.4, 0,0,1,-time * 80 + 45 } }
+	color 0.0 0.0 1.0 1.0
+	radius 13
+	shadows 1
+	
+	material * spotlight.mat
+}
+
+light {
+	pos { exp { -6.8,13,0.4, 0,0,1,-time * 80 } }
+	color 0.0 0.0 1.0 1.0
+	radius 13
+	shadows 1
+	
+	material * spotlight.mat
+}
+
+/*
+ */
+particles {
+	pos { -7.2 35.2 1.79 }
+	num 256
+	speed 0.2
+	rotation 0.3
+	force 1.8 -0.4 -0.3
+	time 2.0
+	radius 0.3
+	color 0.3 0.31 0.31 1.0
+	material * smoke.mat
+}
+
+/*
+ */
+mesh {
+	mesh		chair.mesh
+	material 	*	chair.mat
+	rigidbody {
+		pos { 7 -2 0  0 0 1 -100 }
+		mass 25
+		restitution 0.1
+		friction 0.6
+		collide mesh
+		body box
+	}
+}
+
+mesh {
+	mesh		chair.mesh
+	material 	*	chair.mat
+	rigidbody {
+		pos { 6 3 0  0 0 1 -80 }
+		mass 25
+		restitution 0.1
+		friction 0.6
+		collide mesh
+		body box
+	}
+}
+
+for($z = 0; $z < 2; $z++) {
+	mesh {
+		mesh		box.mesh
+		material 	*	box.mat
+		rigidbody {
+			pos { 6 3 $(1 + $z * 0.5) 0 1 0 $(90 + $z * 90) }
+			mass 10
+			restitution 0.1
+			friction 0.6
+			collide mesh
+			body box
+		}
+	}
+}
+
+mesh {
+	mesh		barrel.mesh
+	material 	*	barrel.mat
+	rigidbody {
+		pos { 1.62 7.48 0  0 0 1 130 }
+		mass 40
+		restitution 0.1
+		friction 0.6
+		collide mesh
+		body box
+	}
+}
+
+$m = 7;
+for($n = 0; $n < $m - 2; $n++) {
+	for($x = 0; $x < $m - $n; $x++) {
+		mesh {
+			mesh box.mesh
+			material * box.mat
+			rigidbody {
+				pos { $($x * 0.36 + $n * 0.16 - 3) 0 $($n * 0.36 - 1.4) 1 0 0 90 }
+				mass 10
+				restitution 0.1
+				friction 0.6
+				collide mesh
+				body box
+			}
+		}
+	}
+}
+
+/*
+ */
+
+$m = 6;
+for($n = 0; $n < $m - 3; $n++) {
+	for($x = 0; $x < $m - $n; $x++) {
+		mesh {
+			mesh box.mesh
+			material * box.mat
+			rigidbody {
+				pos { $($x * 0.36 + $n * 0.16 - 21) 19 $($n * 0.36 - 1) 1 0 0 90 }
+				mass 5
+				restitution 0.1
+				friction 0.8
+				collide mesh
+				body box
+			}
+		}
+	}
+}
+
+
+$m = 4;
+for($n = 0; $n < $m - 2; $n++) {
+	for($x = 0; $x < $m - $n; $x++) {
+		mesh {
+			mesh		barrel.mesh
+			material 	*	barrel.mat
+			rigidbody {
+				pos { $(-25 + $x * 1.0 + 0.5 * $n) 17 $(-1 + $n * 1.1) 0 0 1 $(rand(360)) }
+				mass 40
+				restitution 0.1
+				friction 0.6
+				collide mesh
+				body box
+			}
+		}
+	}
+}
+
+mesh {
+	mesh		barrel.mesh
+	material 	*	barrel.mat
+	rigidbody {
+		pos { -24 17 1.2 0 0 1 $(rand(360)) }
+		mass 40
+		restitution 0.1
+		friction 0.6
+		collide mesh
+		body box
+	}
+}
+
+/*
+ */
+mesh {
+	mesh		barrel.mesh
+	material 	*	barrel.mat
+	rigidbody {
+		pos { -7.2 35 -1 0 0 1 $(rand(360)) }
+		mass 40
+		restitution 0.2
+		friction 0.8
+		collide mesh
+		body box
+	}
+}

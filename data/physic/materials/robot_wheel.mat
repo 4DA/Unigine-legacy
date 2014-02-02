@@ -1,0 +1,6 @@
+<texture0>			robot_wheel_bs.png		RGBA
+<texture1>			robot_wheel_n.png
+<texture2>			normalize_%s.png	CUBE	CLAMP_TO_EDGE
+
+<ambient_shader>	ambient.shader
+<light_shader>		light_dsg.shader

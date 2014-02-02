@@ -1,0 +1,9 @@
+<texture0>			bsod.png
+<texture1>			flat_n.png
+<texture2>			normalize_%s.png	CUBE	CLAMP_TO_EDGE
+
+<parameter0>		0.8 0.8 0.8 1
+<parameter1>		0 0 0 1
+
+<ambient_shader>	glass_ambient.shader
+<light_shader>		glass_light.shader

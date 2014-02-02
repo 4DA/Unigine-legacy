@@ -1,0 +1,6 @@
+<texture0>			robot_camera_bs.png		RGBA
+<texture1>			flat_n.png
+<texture2>			normalize_%s.png	CUBE	CLAMP_TO_EDGE
+
+<ambient_shader>	ambient.shader
+<light_shader>		light_d.shader

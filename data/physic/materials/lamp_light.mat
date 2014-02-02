@@ -1,0 +1,3 @@
+<texture3>		lamplight_%s.png	CUBE
+
+<shader>		light_dsgc.shader
