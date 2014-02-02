@@ -1,0 +1,17 @@
+- text preprocessor with simple language
+- console
+- bsp trees with portals
+- triangle strips
+- skinned mesh
+- particle systems
+- shadow from all objects
+- volumetric fog (based on convex meshes)
+- mirrors
+- perpixel lighting
+- work on all video cards begining fron Geforce2
+- horizon selfshadowing
+- offset bumpmapping
+- collisions
+- rigidbody physics
+- joints
+- ragdoll

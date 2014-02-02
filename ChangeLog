@@ -1,0 +1,440 @@
+2004-06-10 03:22 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Engine_v0.2 release.
+
+2004-06-09 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	4 нонстоп моделинг и багфиксинг, Engine_v0.2 очень скоро.
+	* new: flares, новые шейдеры, много много много фиксов и изменений.
+
+2004-06-05 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Простой конфиг, материалы в lights, cubemap модулятор для источников
+	света, wareframe режим.
+
+2004-06-03 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Скорость физики капитально увеличилась, заработали frozen состояния.
+
+2004-06-02 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	MeshExport плагин для Maya.
+
+2004-05-30 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Две матрицы в Expression.
+
+2004-05-29 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: плагины для maya, box примитив в collider.
+
+2004-05-26 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	seg fault убрал, скорость в set дает косяки при загрузке сцен.
+	
+	* todo: seg fault в Engine::clear(), новая дема.
+	
+	restriction_response готово, скорость при set готова. Joints стали намного
+	лучше работать.
+	
+	* todo: restriction_response, нахождение линейной скорости в
+	RigidBody::set.
+	
+	RadDoll готов, последниый штрих это улучшить restriction_response в Joint.
+	Как это будет готово будет Engine_v0.2 :)
+
+2004-05-22 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: косяк с std::map в visual в Engine::clear().
+
+2004-05-21 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: убрать деление на 0.0, которое вызывает nan во всех float.
+	ограничение углов в суставах.
+	
+	Ragdoll почти заработал, надо сделать конфиг суставов и масс.
+	Новый Universal сустав.
+
+2004-05-17 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: ragdool.
+	Почти работает на gf2mx но много варнингов.
+
+2004-05-16 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	seg faut нету, damping в joints. Цвета и перенос строки в консоле готовы.
+	
+	* todo: убрать seg fault, цвета и перенос строки в консоле,
+	тесты на ati и всех картах.
+
+2004-05-15 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	JointBall и JointHinge в физике.
+
+2004-05-13 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Работа на машинах без пиксельных шейдеров.
+	!!ARBtec (ARB_texture_env_combine + dot3) парсер.
+	
+	* todo: joints, заменитель пиксельных шейдеров, перенос строки и цвета в
+	консоле, терраин, работа на ati.
+	
+	Интерпретатор скриптов готов, умеет for, if/else. Физика все быстрее и
+	быстрее, графика тоже. Добавил звук.
+
+2004-05-10 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: joints, циклы в Parser.
+	Физка готова, провалов нет, глюков тоже нет (колизия вершина -
+	треугольник иногда дает левый вектор).
+
+2004-05-08 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Пофиксил rotate() в mathlib, добавил quat(const mat3&).
+
+2004-05-07 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: связывание объектов, rest forces, опять скорость, перенос строки
+	в консоле, терраин.
+
+2004-05-06 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Новый Position, парсинг выражений, загрузка mesh и particles из .map
+	файла.
+
+2004-05-05 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Экранный PBuffer готов, постобработка - рулит. Некоторые Lights могут не
+	отбрасывать тени.
+
+2004-05-03 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: rest forces, загрузка всех объектов из map, скорость,
+	pbuffer для экрана, пост эффекты, работа на ati.
+
+2004-04-27 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	GLApp обзовелся selectFile(), и глюк с установкой fullscreen на lcd
+	имхо решен. Обновления SkinnedMesh, обновлния плагина.
+
+	Плагин полностью лишился глюков, стал правильно работать с группами
+	сглаживания.
+
+2004-04-25 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Бинарный плагин экспорта готов.
+
+2004-04-19 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: rest forces, бинарный экспортер smesh, скорость.
+	Уровень готов.
+
+2004-04-18 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: уровень, бинарный экспортер smesh, rest forces.
+	
+	.map файл, запоминание контуров в Mesh, 32 сектора в Position,
+	постепенно появляется новый уровень.
+
+2004-04-15 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: rest forces in rigidbody, map файл, бинарный экспортер skinnedmesh
+	из макса.
+
+2004-04-14 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Физика заработала нормально провалов нету, но есть прилипания... :)
+	Текущие баги пофиксены, все ок. Начинаю делать демо уровень "бункер".
+
+2004-04-12 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	updatePos() можно делать в update().
+	
+	2:38 утра, колизии и физика готовы, сейчас поместить RigidBody в Object,
+	сделать взаимодействие между объектами, сделать что-то вроде DummyBody
+	который может двигать RigidBody объекты. Ну а также в колайдер добавить
+	взаимодействие со SkinnedMesh.
+
+2004-04-11 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Не делать updatePos() в Object::update() !!!
+
+2004-04-10 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: партиклы иногда не рисуются, tri-tri колайдер, порядок в
+	rigidbody.cpp, скорость, файл настроек, экспортер skinnedmesh из макса на
+	cpp, экспортер сцены, уменьшение размера .mesh файлов.
+	
+	* summary: сделано просто до$#я...
+	перпроцессор для шейдеров, консоль, bsp деревья, портальный рендеринг,
+	триангл стрипы, скелетная анимация, системы частиц, тени от всех объектов,
+	объемный туман (на выпуклых мешах), зеркала, попиксельное освещение,
+	horizon самозатенения, offset bumpmapping, колизии, rigidbody физика.
+	
+	Трение появилось, rigidbody.cpp почти написан, сейчас надо сделать
+	нормальные tri-tri колизии.
+
+2004-04-09 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	3:48 утра, rigidbody физика заработала, глюков НЕТ. Добавить трение и
+	получится штука не уступающая ODE, хотя там нету и 10 кб :)
+	Скорость работы просто реактивная.
+
+2004-04-08 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	RigidBody физика, mat3 тип данных в mathlib.h, война с collide.cpp.
+
+2004-04-07 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Куча изменений, почти доделал нахождение колизий, со сферами все ок,
+	сейчас делаю колизии с мешами.
+
+2004-04-03 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Основной тормоз - нахождение контура, надо что-то думать с этой фигней.
+	Shadow volumes сейчас рисуются одним glDrawArrays().
+	В два раза ускорил SkinnedMesh::setFrame().
+	Вчера разобрался с gpref, теперь ищу bottlenecks в коде.
+
+2004-04-01 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Два месяца работы над движком, сделана куча работы.
+	Переделал немного PBuffer в линуксе сейчас используются SGIX pbuffer
+	функции при возможности.
+
+2004-03-31 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: скорость, файл настроек, простой заменитель шейдеров, колизии.
+	Обновления шейдеров, выкинул RSQ нормализации из-за их тормознутости.
+	Глюк с reload пофиксен.
+
+2004-03-28 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: reload shaders, при видивых зеркалах с тенями дает кучу ogl ошибок,
+	scissor отсечения ингода отсекают блики в зеркалах, скорость в малых
+	разршениях экрана возрастает не сильно :(
+	Зеркала готовы. Сейчас надо фиксить накопившиеся глюки.
+	
+	* todo: доделать зеркала, функция определения реверсной матрицы.
+	Зеркала почти готовы.
+
+2004-03-26 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Фикс работы pbuffer, не работали вложеные pbuffer`ы.
+	* todo: перенос слов в косоле.
+
+2004-03-25 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: вместо Portal в Frustum передавать 4 точки, нахождение scissor
+	областей тоже возложить на Frustum. Делать зеркала.
+
+2004-03-22 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: mirrors, Bsp::intersection(), collision, physic.
+	Готова экструзия теневых объемов на шейдере, ARB заменитель depth_clamp.
+	Куча изменений, один Object может быть в куче секторов. Улучшеные частицы.
+
+2004-03-21 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Скорость работы частиц увеличена в разы.
+	* todo: Object сделать не точечным, а чтобы он мог быть сразу в нескольких
+	секторах.
+	Все OK, частицы в тумане ведут себя нормально.
+
+2004-03-20 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Сделал частицы, на них можно делать кучу эффектов. Проблема прозрачных
+	объектов в тумане до сих пор открыта.
+	Position стал еще умнее.
+
+2004-03-19 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: light flares, directional lights, particle systems, physics.
+	Возникнет большая проблема частиц в объемном тумане.
+	* shader.cpp: кучка оптимизаций.
+	Более точная нормализация, с использованием ряда Тейлора, векторов в
+	шейдерах.
+	Зачистка заверешена, NV occlusion заменен на ARB вариант.
+	Также кучка небольших переделок.
+
+2004-03-18 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Объемный туман готов, осталось только пару оптимизаций для него сделать.
+
+2004-03-16 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Небольшое затишье... :( Переделал PBuffer, GLApp теперь умеет переключать
+	режимы "на лету", все функции теперь возвращают 0 в случе ошибки и 1 если
+	все ok, unix like ретурнов больше нету.
+
+2004-03-14 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: Антиалиасинг в GLApp, PBuffer. Убрать из PBuffer SGIX функции.
+
+2004-03-11 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: Объемный туман :), возможно материалы без пиксельных шейдеров,
+	системы частиц, collision, физика.
+
+2004-03-10 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Horizon текстуры, новый формат задания фильтра в текстуру, анизотропный
+	фильтр, куча новых параметров в материалах, увеличение колличества текстур
+	до 6, уменьшение размера системного шрифта до 256x256, новый ppl шейдер с
+	offset и horizon, скорость NV3X кода еще больше увеличена, блоки при парсинге
+	подчиняются препроцессору. Новая утилита HorizonTexture, для генерации 3d
+	текстур и lookup cubemaps.
+	
+	3d текстуры готовы, фикс переметров пиксельного шейдера, материалы с
+	alpha_test.
+
+2004-03-09 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: 3d текстуры в текстурах :), horizon textures.
+
+2004-03-08 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Долго парился с пипесами в win32, но все заработало. win32 версия
+	собирается без проблем.
+
+2004-03-07 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Убрал из парсера sscanf. Навел порядок внутри. Системный stderr теперь
+	связян с консолью. Нашел капитальный баг в glibc-2.3.2 из-за него пока
+	нету поддержки GTK в GLApp.
+
+2004-03-06 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Добил SkinnedMeshExport.mzp Переделал структуру директорий.
+
+2004-03-06 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* todo: Системы частиц, collision, физика. Иногда вылазят глюки с
+	порталами.
+	
+	Скелетная анимация с тенями готова, сохранение и чтение smesh файлов.
+	Немного переделал экспортер Skinned Mesh.
+
+2004-03-02 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* summary: эта куча измнений лишилась глюков. Все работает. Сейчас можно
+	делать первую дему на базе движка. Ближайшие планы: системы частиц,
+	skinned mesh объекты, collision detect, физика.
+
+	Целая куча изменений. Теперь есть общий предок для всех объектов.
+	Нету Transform класса. И много много еще чего.
+
+2004-02-29 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	* update: Объекты в секторах появились. Сейчас надо делать более умный
+	Object.
+	
+	* todo: В Sector добавить сылки на Lights и на Objects, которые там
+	присутствуют, и отслеживать их перемещение в Position.
+	
+	* Небольшой обзор: Графическая часть можно сказать готова.
+	Сейчас надо добавить движущиеся объекты, или делать их сразу в виде
+	skinned mesh объектов (думаю там и сделаю). А также надо сделать частицы.
+	Получается какой-то монстровый движек.
+	
+	Добавил offset bump mapping, arb шейдеры.
+	Парсер теперь умеет вложеные #ifdef,... блоки, раньше не умел.
+	Продвинул консоль, добавил кучу комманд, сделал reload_ комманды.
+
+2004-02-28 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	FPS вырос очень существено :)
+	Тени комплит, сейчас все силы на выжимание fps.
+
+2004-02-27 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Свет готов сейчас надо делать тени.
+
+2004-02-25 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Сделал отсечние по порталам, также есть occlusuon test для них.
+	Класс Position готов, сектора ищутся моментально.
+	Так Bsp переписал, теперь нареканий нету. Все красиво и прозрачно.
+	Планы: сделать класс Position, переделать frustum, сделать портальный
+	рендеринг, убрать кучу лампочек из параметров, сделать ламочки, добавить в
+	mesh запоминание контура, присобачить в движек тени. Глобальные планы, но
+	после их реализации графическая чать будет почти готова.
+
+2004-02-23 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Думаю а не переисать ли все. Надо выносить порталы и секторы из bsp
+	файлов, надо сделать это, потом можно из старой версии файлы добавлять.
+	Она уже достаточно функциональна.
+
+2004-02-21 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Добавил новые mesh файлы с поддержкой теней, вылезли странные глюки с
+	пропажей полигонов в bsp дереве.
+
+2004-02-15 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Bsp деревья с порталами. Это то, что надо. Все просто летает, скорость
+	отсечений просто фантастическая. 15 кб в получерновом варианте.
+	Сейчас свет, если со светом все будет хорошо, то делаем стенсильне тени.
+	Но сначала надо сделать усечение фрустума порталами.
+
+2004-02-13 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Надо писать новый генератор bsp деревьев с порталами. Придумал как
+	избежать написания 3d редактора, просто обзываем порталы как "portal...",
+	а сектора окружаем мешем и называем его "sector...".
+
+2004-02-12 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Objects готовы. Теперь освещение и тени. Весь Engine:: стал статическим.
+	Мелкие фиксы, тип bool в консоле, счетчик треугольников, wareframe режим.
+	История комманд в консоле.
+
+2004-02-11 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Повестка дня: засунуть Objects в Engine, частицы, освещение, тени.
+
+2004-02-10 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Пределал немного структуру, Object теперь не наследуется от Node,
+	а является самостоятельным классом. Долго бился с глюком которого как
+	оказалось небыло... Но так или иначе из-за этого сделал пару оптимизаций.
+
+2004-02-09 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Текстуры доработал. На повестке дня: массив произвольных объектов,
+	освещение, стенсильные тени. Но сначала доделать #ifdef блоки.
+	Препроцессор для парсера готов.
+
+2004-02-08 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Терраин готов, плюс готова новая дема с тераином. Косяки с поиском
+	пофиксил, добавил трансформации. Ближайшие планы: доработка текстур,
+	источники света, думать вопрос со стенсильными тенями.
+
+2004-02-04 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Прозрачность и поиск готовы. Есть косяк с поиском файлов содержащих %s
+	это например cubemap текстуры. Ну что сейчас терраин, шум, освещение...
+	Берусь за тераин, это будет новая дема, поскольку терраин будет с
+	динамическими тенями... Мысль: #ifdef, #ifndef, #else, #endif блоки в парсере
+	для выбора кода в зависимости от настроек.
+
+2004-02-03 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Шейдеры готовы. Осталось разобраться со схемой материалов...
+	Ура !! материалы тоже готовы. Небольшие планы: добавить поиск файлов в
+	указываемых путях, сделать прозрачность материалов. Более глобально:
+	загрузка и сохранение 3d текстур с шумом, терраин, источники света,
+	прикручивание физики.
+
+2004-02-02 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Заработали BSP деревья во всей своей карасе :)
+	Полностью определился со структурой движка, процесс пошел.
+	Добавил сегодня парсер. Также определился со схемой шейдеров и материалов.
+
+2004-01-31 Alexander Zaprjagaev <frustum@frustum.org>
+	
+	Новый проект MotEx (Moto Extrime). Консоль написана, экспортер из
+	3dstudio, стрип оптимизатор тоже готовы. Сейчас пишу engine.
